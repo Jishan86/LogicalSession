@@ -1,0 +1,170 @@
+Que1)
+
+package mypack;
+
+import java.util.Scanner;
+
+public class NumDivBy3and7 {
+
+	public static void main(String[] args) {
+		
+		
+		Scanner sc=new Scanner(System.in);
+		int a;
+		
+		System.out.println("Enter a number");
+		a=sc.nextInt();
+		
+		String ss=(a%3==0 && a%7==0 ? "Fun-Buzz": (a%3==0 ? "Fun":(a%7==0 ? "Buzz" :"Number is not divisible by both 3 and 7")));
+		
+		System.out.println(ss);
+		
+		/* 
+		 if(a%3==0)
+		 
+		{
+			if(a%7==0)
+				System.out.println("Fun-Buzz");
+			else
+				System.out.println("Fun");
+		}
+		
+		else if(a%7==0)
+			System.out.println("Buzz");
+		
+		else
+			System.out.println("Not divisible by bith 3 and 7");
+		
+		*/
+	}
+
+}
+
+//__________________________________________________________________________
+
+Que2)
+
+package mypack;
+
+import java.util.Scanner;
+
+public class OddNum {
+
+	public static void main(String[] args) {
+
+		Scanner sc=new Scanner(System.in);
+		
+		
+		System.out.println("Enter start number");
+		int a=sc.nextInt();
+		
+		System.out.println("Enter End number");
+		int b=sc.nextInt();
+		
+		/*
+		 
+		for(int i=a;i<=b;i++)
+		{
+			if(i%2!=0)
+				System.out.println(i);
+		}
+		
+		*/
+
+		for(int i=a;i<=b;i++)
+		{
+			if((i/2)*2!=i)
+				System.out.println(i);
+		}
+	}
+
+}
+
+//________________________________________________________________________
+
+Que3)
+
+package mypack;
+
+import java.util.Scanner;
+
+public class Pallindrome {
+
+		public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
+		System.out.println("Enter a number");
+		int num=sc.nextInt();
+		int num1=num;
+		String str = "";
+		
+		while(num!=0)
+		{
+			int rem = num%10;
+			
+			str = str + rem;
+			
+			num=num/10;
+			
+		}
+		
+		int NewRem=Integer.parseInt(str);
+		
+		if(num1 == NewRem)
+			System.out.println("given number\t"+num1+"\t is a Pallindrome");
+		
+		else
+			System.out.println("given number\t"+num1+"\t is NOT a Pallindrome");
+	}
+
+}
+
+
+//__________________________________________________________________________________
+
+Que4)
+
+package mypack;
+
+import java.util.Scanner;
+
+public class FibonacciSeries {
+
+	public static void main(String[] args) {
+		
+		Scanner sc=new Scanner(System.in);
+		
+		
+		System.out.println("Enter a term");
+		int term = sc.nextInt();
+		
+		int i=0,j=1;
+		
+		int c=0;
+		
+		int sum=0;
+		
+		System.out.print(i+"  ");
+		
+		System.out.print(j+"  ");
+		
+		while (c<=term-2)
+		{
+			sum = i + j;
+			
+			System.out.print(sum+"  ");
+			
+			i=j;
+			
+			j=sum;
+			
+			c++;
+		}
+
+	}
+
+}
+
+//_______________________________________________________________________________
